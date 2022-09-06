@@ -3,7 +3,7 @@
     msg:
       - "{{ ansible_facts.net_hostname }}"
 
-- name: configure interface sw-d1
+- name: configure interface sw1
   ios_config:
     lines:
       - description interface fa0/1 dist-01
@@ -13,10 +13,10 @@
     diff_against: startup
     save_when: modified
     parents: interface FastEthernet0/1
-  when: ansible_facts.net_hostname == "sw-d1"
+  when: ansible_facts.net_hostname == "sw1"
 
 
-- name: configure interface sw-d2
+- name: configure interface sw2
   cisco.ios.ios_config:
     lines:
       - description interface fa0/1 dist-02
@@ -26,9 +26,9 @@
     diff_against: startup
     save_when: modified
     parents: interface FastEthernet0/1
-  when: ansible_facts.net_hostname == "sw-d2"
+  when: ansible_facts.net_hostname == "sw2"
 
-- name: configuration de l'interface du swith  sw-1 pour test
+- name: configuration de l'interface du swith  sw1 pour test
   cisco.ios.ios_config:
     lines:
       - description interface fa0/1 dist-02
