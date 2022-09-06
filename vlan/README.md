@@ -1,7 +1,9 @@
 Role Name
 =========
 
-role ansible perméttant de faire la configuration des VLANs 
+role ansible perméttant de faire la configuration des VLANs sur un routeur.
+
+Dossier important : /test et /task
 
 Example Playbook
 ----------------
