@@ -1,7 +1,6 @@
 Role Name
 =========
-
-Backup d'un équipement
+Devices BackUp
 
 
 Example Playbook
