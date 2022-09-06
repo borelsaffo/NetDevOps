@@ -7,10 +7,10 @@
       mode: access
       access:
         vlan: 10
-      when: ansible_hostname == "sw-a1"
+      when: ansible_hostname == "sw1"
     - name: FastEthernet0/2
       mode: access
       access:
         vlan: 20
-      when: ansible_hostname == "sw-a2"
+      when: ansible_hostname == "sw2"
     state: merged
